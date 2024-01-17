@@ -8,7 +8,7 @@ from app.config import settings
 
 @app.get("/")
 async def home():
-    return {"Welcome": "To Assortment Planning"}
+    return {"Welcome": "To API-Commons v1.0"}
 
 
 @app.on_event("startup")
