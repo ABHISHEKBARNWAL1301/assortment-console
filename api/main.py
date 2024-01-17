@@ -2,7 +2,7 @@ import uvicorn
 from app.db import postgres_db, init_postgres_db
 from app.startup import *
 from app.app import app
-from app.routes import abc
+from app.routes import abc, xyz
 from app.config import settings
 
 
@@ -20,7 +20,7 @@ async def startup():
 
 
 app.include_router(abc)
-
+app.include_router(xyz)
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)
