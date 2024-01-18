@@ -8,13 +8,6 @@ services:
     image: search-fastapi:base
     ports:
       - "8003:8003"
-    volumes:
-      - ./app:/server/app
-      - ./entrypoint.sh:/server/entrypoint.sh
-      - ./main.py:/server/main.py
-      - ./corpus_files/DidYouMean:/server/DidYouMean
-      - ./corpus_files/QuerySuggestor:/server/QuerySuggestor
-      - ./corpus_files/SpellChecker:/server/SpellChecker
     command: server
     env_file:
       - .env
